@@ -1,3 +1,8 @@
+import http from 'http';
+http.createServer((req, res) => {
+  res.write("Bot is running");
+  res.end();
+}).listen(process.env.PORT || 8000);
 import { QbotClient } from './structures/QbotClient';
 import { Client as RobloxClient } from 'bloxy';
 import { handleInteraction } from './handlers/handleInteraction';
